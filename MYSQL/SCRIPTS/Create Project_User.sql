@@ -1,0 +1,11 @@
+USE thinkalikeDB;
+
+CREATE TABLE Project_User(
+	pID INT NOT NULL,
+    uID INT NOT NULL,
+    privilege INT NOT NULL,
+    CONSTRAINT FK_PROJECT FOREIGN KEY (pID)
+    REFERENCES Project(pID),
+    CONSTRAINT FK_USER FOREIGN KEY (uID)
+    REFERENCES User(uID)
+	);
