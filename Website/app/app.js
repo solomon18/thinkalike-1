@@ -1,14 +1,18 @@
 (function(){
+	// want to add another module called helpermodule1?
+	// var app = angular.module('thinkalike', [helpermodule1] );
+
 	var app = angular.module('thinkalike', [ ]);
 
 	// execute this when ProjectController is called
-	app.controller("ProjectController", function(){
+	app.controller('ProjectController', function($scope){
 		this.projects = projects;
 		this.search = "";
 	});
 
 	// dummy data for now
 	// must be populated from the database
+	
 	var projects = [
 	{
 		"projectId": 0,
@@ -29,5 +33,8 @@
 		"owner-name": 'Jose Valdez',
 		"progress": 'panel-danger'
 	}] ;
-
+	
 }) ();
+
+
+
