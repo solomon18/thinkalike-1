@@ -43,10 +43,19 @@
 
 	<!-- Placeholder for the View -->
 	<div data-ng-view="">
-		console.log("Inside View")
+
 	</div>
 
-
+	<div ng-controller="ProjectController as proj">
+	  	<div ng-repeat="project in proj.projects | filter: search | orderBy:'title' : 'reverse' ">
+			<div class="panel {{project.progress}} project-title">
+				<div class="panel-heading">
+				    <h3 class="panel-title"> {{project.title}} </h3>
+				</div>
+				<div class="panel-body"> {{project.description}} </div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
