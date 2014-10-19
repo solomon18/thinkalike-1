@@ -49,6 +49,33 @@
 	// 		.otherwise({ redirectTo: '/' });
 	// });
 	
+
+	app.controller('TeamController', function($scope) {
+		this.projteam = projteam;
+	});
+
+	var projteam = [
+	{
+		"userId": 0,
+		"firstname": 'Brian',
+		"lastname": 'Quigley',
+		"email": 'bquigley@gmail.com',
+		"position": 'Software Engineer'
+	} , {
+		"userId": 1,
+		"firstname": 'Norman',
+		"lastname": 'Thansen',
+		"email": 'nthansen@gmail.com',
+		"position": 'Software Engineer'
+	} , {
+		"userId": 2,
+		"firstname": 'Derek',
+		"lastname": 'Willms',
+		"email": 'cafeeine206@gmail.com',
+		"position": 'Software Engineer'
+	}];
+
+
 }) ();
 
 
