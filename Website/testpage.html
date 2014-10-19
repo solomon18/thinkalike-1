@@ -14,7 +14,7 @@
 
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/angular.js"></script>
-	<script type="text/javascript" src="js/angular-ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular-ui-bootstrap.min.js"></script>		
 	<script type="text/javascript" src="app/app.js"></script>
 </head>
 <body>
@@ -25,7 +25,7 @@
 	<nav class="navbar navbar-default navbar-static-top" role="navigation">
   		<div class="container">
 			<ul class="nav navbar nav-pills">
-		  		<li class="active"><a href="#">Home</a></li>
+		  		<li class="active"><a href="testpage.html">Home</a></li>
 		  		<li><a href="#">Profile</a></li>
 		  		<li><a href="#">Messages</a></li>
 
@@ -38,25 +38,15 @@
 					</form> 
 				</li>
 			</ul>
-
-			
 		</div>
 	</nav>
 
-	<!--(1)attach the ProjectController into this div by calling ng-controller panel-success
-	 	(2)app.js to populate div class to show progress
-	 	(3)app.js to populate project.title and project.description 
-	 	(4)call ngrepeat directive to populate data from app.js projects array -->
-	<div ng-controller="ProjectController as proj">
-	  <div ng-repeat="project in proj.projects | filter: search | orderBy:'title' : 'reverse' ">
-		<div class="panel {{project.progress}} project-title">
-			<div class="panel-heading">
-			    <h3 class="panel-title"> {{project.title}} </h3>
-			</div>
-			<div class="panel-body"> {{project.description}} </div>
-		</div>
-	  </div>
+	<!-- Placeholder for the View -->
+	<div data-ng-view="">
+		console.log("Inside View")
 	</div>
+
+
 
 </body>
 </html>
